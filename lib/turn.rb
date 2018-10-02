@@ -31,6 +31,9 @@ end
 def move (board, index, char = "X")
   if (valid_move?(board, index))
     board[index] = char;
+    return true;
+  else
+    return false;
   end
 end
 
@@ -38,6 +41,8 @@ def turn(board)
   puts "Please enter 1-9:";
   input = gets.to_i;
   index = input_to_index(input);
-  move(board, index);
+   if (!move(board, index))
+     puts "Invalid Input. Enter 1-9:";
+     input = gets.to_i;
   
 end 
