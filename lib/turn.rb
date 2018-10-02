@@ -32,10 +32,12 @@ def move (board, index, char = "X")
   if (valid_move?(board, index))
     board[index] = char;
   end
-end 
+end
 
 def turn(board)
   puts "Please enter 1-9:";
   input = gets.to_i;
   index = input_to_index(input);
+  move (board, index);
+  
 end 
