@@ -44,5 +44,6 @@ def turn(board)
    if (!move(board, index))
      puts "Invalid Input. Enter 1-9:";
      input = gets.to_i;
+   end
   
 end 
